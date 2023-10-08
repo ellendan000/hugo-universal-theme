@@ -74,13 +74,13 @@ _________________________________________________________ -->
         <div class="col-md-12">
             {{ if isset .Site.Params "copyright" }}
             
-            <p class="pull-left">
-                {{ if eq now.year .Site.Params.mysite.copyright_start }}
-                    {{ $year_range := .Site.Params.mysite.copyright_start }}
+            <p class="pull-left">  
+                {{ if eq now.Year .Site.Params.mysite.copyright_start }}
+                    <a>{{ replace .Site.Params.copyright "{year_range}" .Site.Params.mysite.copyright_start | safeHTML }}</a>
                 {{ else }}
-                    {{ $year_range := .Site.Params.mysite.copyright_start + "-" + now.year }}
+                    <a>{{ replace .Site.Params.copyright "{year_range}" (print .Site.Params.mysite.copyright_start "-" now.Year)| safeHTML }}</a>
                 {{ end }}
-                <a>{{ replace .Site.Params.copyright "{year_range}" $year_range | safeHTML }}</a>
+                
                 <br/>
                 
                 {{ if isset .Site.Params.mysite "icp_number" }}
