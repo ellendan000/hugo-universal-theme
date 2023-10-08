@@ -75,7 +75,7 @@ _________________________________________________________ -->
             {{ if isset .Site.Params "copyright" }}
             
             <p class="pull-left">
-                {{ eq now.year .Site.Params.mysite.copyright_start | if }}
+                {{ if eq now.year .Site.Params.mysite.copyright_start }}
                     {{ $year_range := .Site.Params.mysite.copyright_start }}
                 {{ else }}
                     {{ $year_range := .Site.Params.mysite.copyright_start + "-" + now.year }}
