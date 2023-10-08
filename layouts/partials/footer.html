@@ -77,8 +77,8 @@ _________________________________________________________ -->
                 <a>{{ replace .Site.Params.copyright "{-year}" -now.Year | safeHTML }}</a>
                 <br/>
                 
-                {{ if isset .Site.Params.mysite "icp" }}
-                <a href="{{ .Site.Params.mysite.icp.link }}" target="_blank">{{ .Site.Params.mysite.icp.number }}</a>
+                {{ if isset .Site.Params.mysite "icp_number" }}
+                <a href="{{ .Site.Params.mysite.icp_link }}" target="_blank">{{ .Site.Params.mysite.icp_number }}</a>
                 {{ end }}
             </p>
             {{ end }}
