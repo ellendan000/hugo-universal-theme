@@ -86,6 +86,10 @@ _________________________________________________________ -->
                 {{ if isset .Site.Params.mysite "icp_number" }}
                 <a href="{{ .Site.Params.mysite.icp_link }}" target="_blank">{{ .Site.Params.mysite.icp_number }}</a>
                 {{ end }}
+                {{ if isset .Site.Params.mysite "gongan_number"}}
+                <img src="{{"img/gongan.png" | relURL}}" />
+                <a href="{{ .Site.Params.mysite.gongan_link }}" rel="noreferrer" target="_blank">{{ .Site.Params.mysite.gongan_number }}</a>
+                {{end}}
             </p>
             {{ end }}
             <p class="pull-right">
