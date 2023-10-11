@@ -87,7 +87,7 @@ _________________________________________________________ -->
 
                 {{ if isset .Site.Params.mysite "gongan_number"}}
                 <a style="margin-left: 15px;" href="{{ .Site.Params.mysite.gongan_link }}" rel="noreferrer" target="_blank">
-                    <img src="{{"img/gongan.png" | relURL}}" />
+                    <img src="{{"img/gongan.png" | relURL}}" style="width: 14px; height: 14px;"/>
                     {{ .Site.Params.mysite.gongan_number }}
                 </a>
                 {{end}}
