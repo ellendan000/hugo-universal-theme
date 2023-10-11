@@ -80,9 +80,10 @@ _________________________________________________________ -->
                 {{ else }}
                     {{ replace .Site.Params.copyright "{year_range}" (print .Site.Params.mysite.copyright_start "-" now.Year)| safeHTML }}
                 {{ end }}
+                <br/>
 
                 {{ if isset .Site.Params.mysite "icp_number" }}
-                <a style="margin-left: 15px;" href="{{ .Site.Params.mysite.icp_link }}" target="_blank">{{ .Site.Params.mysite.icp_number }}</a>
+                <a href="{{ .Site.Params.mysite.icp_link }}" target="_blank">{{ .Site.Params.mysite.icp_number }}</a>
                 {{ end }}
 
                 {{ if isset .Site.Params.mysite "gongan_number"}}
